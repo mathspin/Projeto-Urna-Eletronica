@@ -90,15 +90,19 @@ function clicou (n) {
 }
 function branco() {
     
-    numero = '';
-    votoBranco = true;
+    if (numero === '') {
+        //numero = '';
+        votoBranco = true;
 
-    seuVotoPara.style.display = 'block';
-    aviso.style.display = 'block';
-    numeros.innerHTML = '';
-    descricao.innerHTML = '<div class = "aviso-grande pisca">VOTO EM BRANCO</div>';
-    lateral.innerHTML = '';
-
+        seuVotoPara.style.display = 'block';
+        aviso.style.display = 'block';
+        numeros.innerHTML = '';
+        descricao.innerHTML = '<div class = "aviso-grande pisca">VOTO EM BRANCO</div>';
+        lateral.innerHTML = '';
+    }
+    else {
+        alert('Para votar em BRANCO, não pode ter nenhum numéro digitado. Para votar em BRANCO, aperte CORRIGE antes!')
+    }
 }
 function corrige() {
     comecarEtapa();
